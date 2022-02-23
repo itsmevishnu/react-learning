@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling CSV</title>
+    <script>
+        const url = "https://gist.githubusercontent.com/itsmevishnu/87b1929d92380a4d513ed5f396afc455/raw/2d666e7b7e47f5d9302810bfd6a55da17027de74/colours.csv";
+        // promise = fetch(url);
+        // promise.then(response=>{
+        //   response.text().then(text=>{
+        //         console.log(text);
+        //     })
+        // })
+        const fetchText = async (url) => {
+            const response = await fetch(url);
+            return await response.text();
+
+        }
+        fetchText(url).then( text => {
+            console.log(text);
+        })
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
